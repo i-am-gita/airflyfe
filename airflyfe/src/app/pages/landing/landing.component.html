@@ -1,0 +1,76 @@
+<div id="booking" class="section">
+  <app-header></app-header>
+  <div class="section-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="booking-cta">
+            <h1>Book your flight</h1>
+            <p>Fill the simple form and start packing your stuff!</p>
+          </div>
+        </div>
+        <div class="col-md-7 col-md-offset-1">
+          <div class="booking-form">
+            <form>
+<!--              <div class="form-group">-->
+<!--                <div class="form-checkbox">-->
+<!--                  <label for="roundtrip">-->
+<!--                    <input type="radio" id="roundtrip" name="flight-type">-->
+<!--                    <span></span>Svakodnevni-->
+<!--                  </label>-->
+<!--                  <label for="one-way">-->
+<!--                    <input type="radio" id="one-way" name="flight-type">-->
+<!--                    <span></span>Nedeljni-->
+<!--                  </label>-->
+<!--                  <label for="multi-city">-->
+<!--                    <input type="radio" id="multi-city" name="flight-type">-->
+<!--                    <span></span>Jednokratni-->
+<!--                  </label>-->
+<!--                </div>-->
+<!--              </div>-->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Where from?</span>
+                    <input [(ngModel)]="flightInfo.departureAirport" [ngModelOptions]="{standalone: true}"
+                           class="form-control" type="text" placeholder="Airport">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Where to?</span>
+                    <input [(ngModel)]="flightInfo.arrivalAirport" [ngModelOptions]="{standalone: true}"
+                           class="form-control" type="text" placeholder="Airport">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Departure</span>
+                    <input [(ngModel)]="flightInfo.goingDate" [ngModelOptions]="{standalone: true}"
+                           class="form-control" type="date" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Return</span>
+                    <input [(ngModel)]="flightInfo.returnDate" [ngModelOptions]="{standalone: true}"
+                           class="form-control" type="date">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-btn">
+                <button (click)="getFlights()" class="submit-btn">Flights</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-flights *ngIf="showFlights === true" [flights]="flights"></app-flights>
+
+

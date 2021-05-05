@@ -1,0 +1,34 @@
+.card {
+  margin: 2rem;
+}
+
+.destination-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.seats-number {
+  position: relative;
+  float: left;
+  padding: 1em 1.5em;
+}
+
+.ticket-link {
+  position: relative;
+  float: right;
+  background-color: lightskyblue;
+  color: black;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.flight-date {
+  position: relative;
+  float: left;
+}
+
+.lowest-price {
+  position: relative;
+  float: right;
+}
