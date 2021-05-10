@@ -1,5 +1,5 @@
 
-<nav class="navbar sticky-top navbar-expand-lg bg-transparent">
+<nav class="navbar sticky-top navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="#"><img alt="logo" class="logo" src="assets/images/logo.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,7 @@
           <a href class="nav-link" routerLink="/admin" *ngIf="isAdmin">Add Flight</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Flights <span class="sr-only">(current)</span></a>
+          <a href class="nav-link" routerLink="/flights">Flights <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Destinations</a>

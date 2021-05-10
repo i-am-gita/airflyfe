@@ -1,0 +1,78 @@
+<div class="col-md-6 offset-md-3 mt-5">
+  <div class="card">
+    <h4 class="card-header">Add Flight</h4>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-3 mt-5">
+          <div class="custom-control custom-radio">
+            <input type="radio" [value]="3" [(ngModel)]="newFlight.flightType" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+            <label class="custom-control-label" for="customRadio1">Everyday</label>
+          </div>
+          <div class="custom-control custom-radio mt-3">
+            <input type="radio" [value]="1" [(ngModel)]="newFlight.flightType" id="customRadio2" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio2">One way</label>
+          </div>
+          <div class="custom-control custom-radio mt-3">
+            <input type="radio" [value]="2" [(ngModel)]="newFlight.flightType" id="customRadio3" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio3">Weekly</label>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="row">
+            <div class="col-lg-6">
+              <label for="departure-airport" class=" col-form-label">Departure</label>
+              <input [(ngModel)]="newFlight.departureAirportName" class="form-control" type="text" placeholder="Airport" id="departure-airport" required>
+            </div>
+            <div class="col-lg-6">
+              <label for="departure-city" class=" col-form-label">Departure</label>
+              <input [(ngModel)]="newFlight.departureCity" class="form-control" type="text" placeholder="City" id="departure-city" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <label for="arrival-airport" class=" col-form-label">Arrival</label>
+              <input [(ngModel)]="newFlight.arrivalAirportName" class="form-control" type="text" placeholder="Airport" id="arrival-airport" required>
+            </div>
+            <div class="col-lg-6">
+              <label for="arrival-city" class=" col-form-label">Arrival</label>
+              <input [(ngModel)]="newFlight.arrivalCity" class="form-control" type="text"  placeholder="City" id="arrival-city" required>
+            </div>
+          </div>
+        </div>
+      </div>
+          <div class="form-group row">
+            <div class="col-6">
+              <label for="example-datetime-local-input" class=" col-form-label">Departure date</label>
+              <input [(ngModel)]="newFlight.takeOffDate" class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" required>
+            </div>
+            <div class="col-6">
+              <label for="select-airline" class=" col-form-label">Airline</label>
+              <select class="form-control form-select-lg mb-3" [(ngModel)]="newFlight.selectedAirline" id="select-airline" required>
+                <option [value]="air.airlineid" *ngFor="let air of this.airlines">{{air.name}}</option>
+              </select>
+            </div>
+          </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <label for="available-tickets" class=" col-form-label">Available tickets</label>
+          <input class="form-control" [(ngModel)]="newFlight.ticketNumber"  type="number" placeholder="Ticket number" id="available-tickets" required>
+        </div>
+        <div class="col-lg-4">
+          <label for="economic-price" class=" col-form-label">Economic price</label>
+          <input class="form-control" [(ngModel)]="newFlight.priceEconomics"  type="number" placeholder="Price" id="economic-price" required>
+        </div>
+        <div class="col-lg-4">
+          <label for="first-price" class=" col-form-label">First class price</label>
+          <input class="form-control" [(ngModel)]="newFlight.priceFirstClass"  type="number" placeholder="Price" id="first-price" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 offset-lg-5">
+          <button type="submit" class="btn btn-success btn-lg" (click)="addNewFlight()">Add Flight</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -7,6 +7,8 @@ import {Flight} from '../../core/data/flight';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Ticket} from '../../core/data/ticket';
 import {tick} from '@angular/core/testing';
+import {NewFlightDTO} from '../../core/dto/newFlightDTO';
+import {Airline} from '../../core/data/airline';
 
 @Injectable({ providedIn: 'root' })
 export class FlightsService {
@@ -16,6 +18,16 @@ export class FlightsService {
   });
 
   constructor(private http: HttpClient) {
+  }
+
+  addNewFlight(data: NewFlightDTO): Observable<Flight> {
+    const url = environment.serverUrl + 'api/flight/add';
+    return new Observable(((o: any) => {
+      this.http.post(url, data,{headers: this.httpHeaders }).subscribe((flight: Flight) => {
+        o.next(flight);
+        return o.complete();
+      });
+    }));
   }
 
   getOneWayFlights(data: FlightDTO): Observable<Flight[]> {
@@ -54,6 +66,16 @@ export class FlightsService {
     return new Observable(((o: any) => {
       this.http.get(url, {headers: this.httpHeaders }).subscribe((flights: Flight[]) => {
         o.next(flights);
+        return o.complete();
+      });
+    }));
+  }
+
+  getAllAirlines(): Observable<Airline[]> {
+    const url = environment.serverUrl + 'api/airline/getAll';
+    return new Observable(((o: any) => {
+      this.http.get(url, {headers: this.httpHeaders }).subscribe((airlines: Airline[]) => {
+        o.next(airlines);
         return o.complete();
       });
     }));

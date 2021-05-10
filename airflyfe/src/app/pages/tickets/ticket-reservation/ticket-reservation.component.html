@@ -1,0 +1,35 @@
+
+<div class="card">
+  <div class="card-header">
+
+    <span class="flight-date">{{flight.takeoffdate}}</span>
+  </div>
+  <div class="card-body text-center">
+    <h5 class="card-title">{{flight.airline.name}}</h5>
+    <span class="text-muted">{{printType(flight.typee)}}</span>
+    <div class="row">
+      <div class="col-sm-5 destination-text">
+       Departure city: {{flight.destination.airport1.city}}
+       Departure airport {{flight.destination.airport1.name}}
+      </div>
+      <div class="col-sm-5 destination-text">
+        Arrival city: {{flight.destination.airport2.city}}
+        Arrival airport: {{flight.destination.airport2.name}}
+      </div>
+      <div class="col-sm-5 destination-text">
+        Economic price:  {{ticket.priceeconomics}}
+        Business price:  {{ticket.pricebusiness}}
+        Fifth reservation discount: {{getDiscount()}}
+      </div>
+    </div>
+    <!--    <p class="card-text">{{flight.destination.airport1.name}}-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;{{flight.destination.airport2.name}}</p>-->
+  </div>
+  <div class="card-footer ">
+    <span class="seats-number text-muted">Seats available:{{flight.availabletickets}}</span>
+    <span>
+
+      <a href  class="nav-link ticket-link" (click)="ticketReservation(flight)">Rezerviši mesto</a>
+    </span>
+
+  </div>
+</div>

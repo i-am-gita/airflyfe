@@ -9,6 +9,9 @@ import { FlightItemComponent } from './flights/flight-item/flight-item.component
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
+import { AddFlightComponent } from './add-flight/add-flight.component';
+import { AllFlightsComponent } from './all-flights/all-flights.component';
+import { TicketReservationComponent } from './tickets/ticket-reservation/ticket-reservation.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import {RouterModule} from '@angular/router';
     FlightsComponent,
     FlightItemComponent,
     FlightListComponent,
+    AddFlightComponent,
+    AllFlightsComponent,
+    TicketReservationComponent,
   ],
   exports: [
     LandingComponent,

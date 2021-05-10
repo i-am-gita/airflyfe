@@ -5,5 +5,4 @@ export interface Airline {
   name: string;
   luggageinfo: string;
   companyinfo: string;
-  reviews: Review[];
 }
