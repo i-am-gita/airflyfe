@@ -2,8 +2,8 @@ import {Review} from './review';
 
 export interface Airline {
   airlineid: number;
-  description: string;
-  luggageinfo: string;
   name: string;
+  luggageinfo: string;
+  companyinfo: string;
   reviews: Review[];
 }

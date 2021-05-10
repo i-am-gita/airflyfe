@@ -48,4 +48,14 @@ export class FlightsService {
       });
     }));
   }
+
+  getFlights(): Observable<Flight[]> {
+    const url = environment.serverUrl + 'api/flight/getAllFlights';
+    return new Observable(((o: any) => {
+      this.http.get(url, {headers: this.httpHeaders }).subscribe((flights: Flight[]) => {
+        o.next(flights);
+        return o.complete();
+      });
+    }));
+  }
 }

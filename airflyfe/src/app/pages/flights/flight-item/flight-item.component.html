@@ -1,11 +1,11 @@
 <div class="card">
   <div class="card-header">
-    <span class="flight-date">{{flight.date}}</span>
-    <span class="lowest-price">Već od {{flight.ticket.priceeconomics}} RSD</span>
+
+    <span class="flight-date">{{flight.takeoffdate}}</span>
   </div>
   <div class="card-body text-center">
     <h5 class="card-title">{{flight.airline.name}}</h5>
-    <span class="text-muted">{{printType(flight.type)}}</span>
+    <span class="text-muted">{{printType(flight.typee)}}</span>
     <div class="row">
       <div class="col-sm-5 destination-text">
         {{flight.destination.airport1.name}}

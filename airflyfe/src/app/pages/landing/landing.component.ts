@@ -25,6 +25,7 @@ export class LandingComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(localStorage.getItem('currentUser'));
   }
 
   getFlights() {

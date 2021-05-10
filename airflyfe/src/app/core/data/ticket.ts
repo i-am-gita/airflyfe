@@ -1,9 +1,10 @@
-import {Passenger} from './passenger';
+import {Userr} from './userr';
+
 
 export interface Ticket {
 
   ticketid: number;
   pricebusiness: number;
   priceeconomics: number;
-  passenger: Passenger;
+  user: Userr;
 }

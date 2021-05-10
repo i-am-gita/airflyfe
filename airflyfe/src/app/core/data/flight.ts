@@ -6,8 +6,8 @@ import {Ticket} from './ticket';
 export interface Flight {
   flightid: number;
   availabletickets: number;
-  date: Date;
-  type: number;
+  takeoffdate: Date;
+  typee: number;
   airline: Airline;
   destination: Destination;
   plane: Plane;

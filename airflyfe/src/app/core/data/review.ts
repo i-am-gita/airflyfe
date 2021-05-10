@@ -1,10 +1,10 @@
 import {Airline} from './airline';
-import {Passenger} from './passenger';
+import {Userr} from './userr';
 
 export interface Review {
   reviewid: string;
   description: string;
   grade: number;
   airline: Airline;
-  passenger: Passenger;
+  user: Userr;
 }

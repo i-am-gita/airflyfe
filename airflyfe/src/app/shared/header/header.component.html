@@ -8,6 +8,9 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav-items navbar-nav mr-auto w-100">
+        <li class="nav-item">
+          <a href class="nav-link" routerLink="/admin" *ngIf="isAdmin">Add Flight</a>
+        </li>
         <li class="nav-item active">
           <a class="nav-link" href="#">Flights <span class="sr-only">(current)</span></a>
         </li>
@@ -16,14 +19,17 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
         </li>
+
       </ul>
       <ul class="navbar-nav mr-auto justify-content-lg-end">
-        <li class="nav-item active">
-
-          <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
+        <li *ngIf="isLogged()" class="nav-item">
+          <a href class="nav-link" (click)="logout()">Logout</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Register</a>
+        <li *ngIf="!isLogged()" class="nav-item active">
+          <a href  class="nav-link" routerLink="/login">Login</a>
+        </li>
+        <li *ngIf="!isLogged()" class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/register">Register</a>
         </li>
       </ul>
     </div>
