@@ -1,35 +1,33 @@
-
+<div class="container">
 <div class="card">
   <div class="card-header">
+    <span class="flight-date">{{flight.takeoffdate }}</span>
+    <span class="col-lg-2  seats-number text-muted">Seats available:{{flight.availabletickets}}</span>
 
-    <span class="flight-date">{{flight.takeoffdate}}</span>
   </div>
   <div class="card-body text-center">
     <h5 class="card-title">{{flight.airline.name}}</h5>
     <span class="text-muted">{{printType(flight.typee)}}</span>
     <div class="row">
-      <div class="col-sm-5 destination-text">
-       Departure city: {{flight.destination.airport1.city}}
-       Departure airport {{flight.destination.airport1.name}}
+      <div class="col-lg-5 ">
+       Departure city: {{flight.destination.airport1.city}} <br>
+       Departure airport {{flight.destination.airport1.name}}<br>
       </div>
-      <div class="col-sm-5 destination-text">
-        Arrival city: {{flight.destination.airport2.city}}
-        Arrival airport: {{flight.destination.airport2.name}}
-      </div>
-      <div class="col-sm-5 destination-text">
-        Economic price:  {{ticket.priceeconomics}}
-        Business price:  {{ticket.pricebusiness}}
-        Fifth reservation discount: {{getDiscount()}}
+      <div class="col-lg-5 ">
+        Arrival city: {{flight.destination.airport2.city}}<br>
+        Arrival airport: {{flight.destination.airport2.name}}<br>
       </div>
     </div>
-    <!--    <p class="card-text">{{flight.destination.airport1.name}}-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;{{flight.destination.airport2.name}}</p>-->
   </div>
   <div class="card-footer ">
-    <span class="seats-number text-muted">Seats available:{{flight.availabletickets}}</span>
-    <span>
-
-      <a href  class="nav-link ticket-link" (click)="ticketReservation(flight)">Rezerviši mesto</a>
-    </span>
-
+        <div *ngIf="discount==='No'">
+          <div> Economic price:  {{ticket.priceeconomics}}           <button class="btn btn-success" (click)="ticketReservation(flight)">Rezerviši</button></div> <br>
+          <div>  Business price:  {{ticket.pricebusiness}}            <button class="btn btn-success" (click)="ticketReservation(flight)">Rezerviši</button></div>
+        </div>
+        <div *ngIf="discount==='Yes'">
+          Economic price with discount: {{ticketWithDiscount.priceeconomics}}     <button class="btn btn-success" (click)="ticketReservation(flight)">Rezerviši</button> <br>
+          Business price with discount: {{ticketWithDiscount.pricebusiness}}      <button class="btn btn-success" (click)="ticketReservation(flight)">Rezerviši</button>
+        </div>
   </div>
+</div>
 </div>

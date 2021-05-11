@@ -26,7 +26,6 @@ export class HeaderComponent implements OnInit {
   }
 
   get isAdmin() {
-    console.log(this.currentUser)
     return this.currentUser && this.currentUser.roles.includes(Role.Admin);
   }
 

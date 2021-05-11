@@ -1,31 +1,97 @@
+
 <div class="container">
   <div class="row justify-content-center">
-
-<!--    <div class="col-md-4">-->
-<!--&lt;!&ndash;      FILTERI&ndash;&gt;-->
-<!--      <div class="card">-->
-<!--        <div class="card-header">-->
-<!--         FILTERI-->
-<!--        </div>-->
-<!--        <div class="card-body text-center">-->
-<!--          <h5 class="card-title">TO DO</h5>-->
-<!--          <span class="text-muted">TO DO</span>-->
-<!--          <div class="row">-->
-<!--            <div class="col-sm-5 destination-text">-->
-<!--              TO DO-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          &lt;!&ndash;    <p class="card-text">{{flight.destination.airport1.name}}-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;{{flight.destination.airport2.name}}</p>&ndash;&gt;-->
-<!--        </div>-->
-<!--        <div class="card-footer ">-->
-<!--        TO DO-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    class="col-md-8"-->
-    <div >
-<!--      LETOVI-->
-      <app-flight-list [flightList]="flights"></app-flight-list>
+    <div>
+      <div class="container">
+        <div *ngFor="let flight of flights">
+          <div class="card">
+            <div class="card-header">
+              <span class="flight-date">{{flight.takeoffdate}}</span>
+            </div>
+            <div class="card-body text-center">
+              <a href class="btn card-title" data-toggle="modal" data-target="#modalCenter">{{flight.airline.name}}</a>
+              <span class="text-muted">{{printType(flight.typee)}}</span>
+              <div class="row">
+                <div class="col-sm-5 destination-text">
+                  {{flight.destination.airport1.name}}
+                </div>
+                <div class="col-sm-2" style="margin-top: 1em;">
+                  -
+                </div>
+                <div class="col-sm-5 destination-text">
+                  {{flight.destination.airport2.name}}
+                </div>
+              </div>
+            </div>
+            <div class="card-footer ">
+              <span class="seats-number text-muted">Seats available:{{flight.availabletickets}}</span>
+              <span>
+                <button class="btn  ticket-link" (click)="ticketReservation(flight)">Rezerviši mesto</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+<!--<div class="container">-->
+<!--  <div class="row justify-content-center">-->
+
+<!--&lt;!&ndash;    <div class="col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      FILTERI&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="card">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="card-header">&ndash;&gt;-->
+<!--&lt;!&ndash;         FILTERI&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="card-body text-center">&ndash;&gt;-->
+<!--&lt;!&ndash;          <h5 class="card-title">TO DO</h5>&ndash;&gt;-->
+<!--&lt;!&ndash;          <span class="text-muted">TO DO</span>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="col-sm-5 destination-text">&ndash;&gt;-->
+<!--&lt;!&ndash;              TO DO&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;          &lt;!&ndash;    <p class="card-text">{{flight.destination.airport1.name}}-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;{{flight.destination.airport2.name}}</p>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="card-footer ">&ndash;&gt;-->
+<!--&lt;!&ndash;        TO DO&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    class="col-md-8"&ndash;&gt;-->
+<!--    <div >-->
+<!--&lt;!&ndash;      LETOVI&ndash;&gt;-->
+<!--      <app-flight-list [flightList]="flights"></app-flight-list>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

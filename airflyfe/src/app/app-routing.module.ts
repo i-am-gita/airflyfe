@@ -9,6 +9,7 @@ import {AddFlightComponent} from './pages/add-flight/add-flight.component';
 import {RoleGuard} from './core/auth/role.guard';
 import {AllFlightsComponent} from './pages/all-flights/all-flights.component';
 import {TicketReservationComponent} from './pages/tickets/ticket-reservation/ticket-reservation.component';
+import {AirlineInfoComponent} from './pages/airline-info/airline-info.component';
 
 export const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -16,44 +17,8 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'admin', component: AddFlightComponent, canActivate: [RoleGuard] },
   { path: 'flights', component: AllFlightsComponent },
-  { path: 'ticket', component: TicketReservationComponent, canActivate: [AuthGuard] },
-
-
-  {
-    path: 'pages',
-    loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
-  },
-  {
-    path: 'airfly',
-    component: LandingComponent,
-    children: [
-      {
-        path: 'letovi',
-        component: FlightsComponent,
-      },
-      {
-        path: 'destinacije',
-        component: FlightsComponent,
-      },
-      {
-        path: 'informacije',
-        component: FlightsComponent,
-      },
-      {
-        path: 'kontakt',
-        component: FlightsComponent,
-      },
-
-      {
-        path: 'registracija',
-        component: FlightsComponent,
-      },
-      {
-        path: 'prijava',
-        component: FlightsComponent,
-      },
-    ],
-  },
+  { path: 'ticket', component: TicketReservationComponent, canActivate: [AuthGuard]},
+  { path: 'airline', component: AirlineInfoComponent },
 ];
 
 const config: ExtraOptions = {

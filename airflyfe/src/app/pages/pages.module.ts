@@ -12,6 +12,7 @@ import {RouterModule} from '@angular/router';
 import { AddFlightComponent } from './add-flight/add-flight.component';
 import { AllFlightsComponent } from './all-flights/all-flights.component';
 import { TicketReservationComponent } from './tickets/ticket-reservation/ticket-reservation.component';
+import { AirlineInfoComponent } from './airline-info/airline-info.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TicketReservationComponent } from './tickets/ticket-reservation/ticket-
     AddFlightComponent,
     AllFlightsComponent,
     TicketReservationComponent,
+    AirlineInfoComponent,
   ],
   exports: [
     LandingComponent,

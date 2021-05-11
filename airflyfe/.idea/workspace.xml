@@ -2,21 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a1afaef-9d23-4833-a6ac-fbcfb151c675" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/core/dto/newFlightDTO.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/data/airline.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/data/airline.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/data/ticket.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/data/ticket.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/data/userr.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/data/userr.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/add-flight/add-flight.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/add-flight/add-flight.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/all-flights/all-flights.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/all-flights/all-flights.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/flights/flight-item/flight-item.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/flights/flight-item/flight-item.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/flights/flight-item/flight-item.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/flights/flight-item/flight-item.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/flights/flights.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/flights/flights.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/landing/landing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/landing/landing.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/landing/landing.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/landing/landing.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/flights/flights.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/flights/flights.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/flights/flights.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/flights/flights.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/tickets/ticket-reservation/ticket-reservation.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tickets/ticket-reservation/ticket-reservation.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/tickets/ticket-reservation/ticket-reservation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tickets/ticket-reservation/ticket-reservation.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/tickets/ticket-reservation/ticket-reservation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tickets/ticket-reservation/ticket-reservation.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/tickets/ticket.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tickets/ticket.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/shared/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/header/header.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/header/header.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +119,9 @@
       <workItem from="1619621922892" duration="2737000" />
       <workItem from="1619690298456" duration="531000" />
       <workItem from="1620221079873" duration="747000" />
-      <workItem from="1620627443636" duration="33087000" />
+      <workItem from="1620627443636" duration="33220000" />
+      <workItem from="1620716142713" duration="6379000" />
+      <workItem from="1620727619447" duration="11106000" />
     </task>
     <servers />
   </component>

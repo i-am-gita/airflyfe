@@ -1,7 +1,7 @@
 import {Role} from './role';
 import {Ticket} from './ticket';
 
-export interface Userr {
+export class Userr {
   userid: number;
   username: string;
   password: string;
@@ -9,4 +9,7 @@ export interface Userr {
   name: string;
   roles: Role[];
   token?: string;
+
+  constructor() {
+  }
 }

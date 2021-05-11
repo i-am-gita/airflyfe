@@ -1,8 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Flight} from '../../../core/data/flight';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {TicketService} from '../../tickets/ticket.service';
 import {AlertService} from '../../../shared/alert/alert.service';
+import {Airline} from '../../../core/data/airline';
+import {AirlineService} from '../../airline-info/airline.service';
 
 @Component({
   selector: 'app-flight-item',
@@ -12,9 +14,10 @@ import {AlertService} from '../../../shared/alert/alert.service';
 export class FlightItemComponent implements OnInit {
 
   @Input('flight') flight: Flight;
+  showAirline: boolean = false;
 
   constructor(private router: Router, private ticketService:TicketService,
-              private alertService: AlertService) { }
+              private alertService: AlertService, private airlineService: AirlineService) { }
 
   ngOnInit(): void {
   }
@@ -32,7 +35,6 @@ export class FlightItemComponent implements OnInit {
 
 
   ticketReservation(flight: Flight) {
-
     if(flight.availabletickets < 1) {
       this.alertService.error('There are no seats left on this flight!')
     }
@@ -40,5 +42,10 @@ export class FlightItemComponent implements OnInit {
       this.ticketService.selectedFlight = flight;
       this.router.navigate(['/ticket']);
     }
+  }
+
+  toAirlinePage(airline: Airline) {
+    this.airlineService.airline = airline;
+    this.showAirline = this.showAirline !== true;
   }
 }

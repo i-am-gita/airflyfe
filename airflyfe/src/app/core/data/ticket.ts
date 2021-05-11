@@ -1,4 +1,5 @@
 import {Userr} from './userr';
+import {Flight} from './flight';
 
 
 export interface Ticket {
@@ -7,4 +8,5 @@ export interface Ticket {
   pricebusiness: number;
   priceeconomics: number;
   user: Userr;
+  flight: Flight;
 }
