@@ -4,8 +4,9 @@
     <span class="flight-date">{{flight.takeoffdate}}</span>
   </div>
   <div class="card-body text-center">
+    <div class="text-muted">{{printType(flight.typee)}}</div>
+
     <button class="card-title btn btn-info" (click)="toAirlinePage(flight.airline)">{{flight.airline.name}}</button>
-    <span class="text-muted">{{printType(flight.typee)}}</span>
     <div class="row">
       <div class="col-sm-5 destination-text">
         {{flight.destination.airport1.name}}

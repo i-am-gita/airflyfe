@@ -9,11 +9,15 @@ import {Ticket} from '../../core/data/ticket';
 import {tick} from '@angular/core/testing';
 import {NewFlightDTO} from '../../core/dto/newFlightDTO';
 import {Airline} from '../../core/data/airline';
+import {Review} from '../../core/data/review';
+import {ReviewDTO} from '../../core/dto/reviewDTO';
 
 @Injectable({ providedIn: 'root' })
 export class AirlineService {
 
   airline: Airline;
+
+  review: Review;
 
   private httpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
@@ -39,6 +43,26 @@ export class AirlineService {
     return new Observable(((o: any) => {
       this.http.get(url, {headers: this.httpHeaders }).subscribe((ticket: Ticket) => {
         o.next(ticket);
+        return o.complete();
+      });
+    }));
+  }
+
+  getReviewsForAirlineId(id: number): Observable<Review[]> {
+    const url = environment.serverUrl + 'api/review/getAirlineReviews/' + id;
+    return new Observable(((o: any) => {
+      this.http.get(url, {headers: this.httpHeaders }).subscribe((reviews: Review[]) => {
+        o.next(reviews);
+        return o.complete();
+      });
+    }));
+  }
+
+  createReview(data: ReviewDTO): Observable<ReviewDTO> {
+    const url = environment.serverUrl + 'api/review/create';
+    return new Observable(((o: any) => {
+      this.http.post(url, data, { headers: this.httpHeaders }).subscribe((review: Review) => {
+        o.next(review);
         return o.complete();
       });
     }));

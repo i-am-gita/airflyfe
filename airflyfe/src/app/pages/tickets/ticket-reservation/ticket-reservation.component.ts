@@ -15,8 +15,8 @@ export class TicketReservationComponent implements OnInit {
 
   ticket: Ticket = {
     flight: null,
-    priceeconomics: -1,
-    pricebusiness: -1,
+    priceeconomics: 15000,
+    pricebusiness: 22000,
     user: null,
     ticketid: -1,
   };

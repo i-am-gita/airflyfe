@@ -20,13 +20,13 @@
     </div>
   </div>
   <div class="card-footer ">
-        <div *ngIf="discount==='No'">
-          <div> Economic price:  {{ticket.priceeconomics}}           <button class="btn btn-success" (click)="ticketReservation(flight)">Rezerviši</button></div> <br>
-          <div>  Business price:  {{ticket.pricebusiness}}            <button class="btn btn-success" (click)="ticketReservation(flight)">Rezerviši</button></div>
+        <div *ngIf="discount==='No'" class="row">
+          <div class="col-lg-6"> Economic price:  {{ticket.priceeconomics}}           <button class="btn btn-success" (click)="ticketReservation(flight)">Rezerviši</button></div>
+          <div class="col-lg-6">  Business price:  {{ticket.pricebusiness}}            <button class="btn btn-success" (click)="ticketReservation(flight)">Rezerviši</button></div>
         </div>
-        <div *ngIf="discount==='Yes'">
-          Economic price with discount: {{ticketWithDiscount.priceeconomics}}     <button class="btn btn-success" (click)="ticketReservation(flight)">Rezerviši</button> <br>
-          Business price with discount: {{ticketWithDiscount.pricebusiness}}      <button class="btn btn-success" (click)="ticketReservation(flight)">Rezerviši</button>
+        <div *ngIf="discount==='Yes'" class="row">
+          <div class="col-lg-6">Economic price with discount: {{ticketWithDiscount.priceeconomics}}     <button class="btn btn-success" (click)="ticketReservation(flight)">Rezerviši</button></div>
+          <div class="col-lg-6"> Business price with discount: {{ticketWithDiscount.pricebusiness}}      <button class="btn btn-success" (click)="ticketReservation(flight)">Rezerviši</button> </div>
         </div>
   </div>
 </div>

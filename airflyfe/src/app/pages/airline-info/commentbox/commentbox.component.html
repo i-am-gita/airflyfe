@@ -1,0 +1,13 @@
+<form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <textarea class="form-control" placeholder="Leave a review" formControlName="comment" [ngClass]="{ 'is-invalid': submitted && commentForm.controls['comment'].errors }"></textarea>
+    <div class="invalid-feedback" *ngIf="submitted && commentForm.controls['comment'].errors">
+      <div *ngIf="commentForm.controls['comment'].errors.required">Review is required</div>
+      <div *ngIf="commentForm.controls['comment'].errors.minlength">Review must be at least 6 characters</div>
+      <div *ngIf="commentForm.controls['comment'].errors.maxlength">Review must be at most 100 characters</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-success">Post Review</button>
+  </div>
+</form>
