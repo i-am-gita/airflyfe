@@ -48,4 +48,5 @@ export class FlightItemComponent implements OnInit {
     this.airlineService.airline = airline;
     this.showAirline = this.showAirline !== true;
   }
+
 }

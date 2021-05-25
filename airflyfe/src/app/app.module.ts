@@ -13,6 +13,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import { AlertComponent } from './shared/alert/alert.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AlertComponent } from './shared/alert/alert.component';
     RouterModule,
     ReactiveFormsModule,
     CommonModule,
+    NgbModule,
   ],
   providers: [
     HttpClientModule,

@@ -5,4 +5,5 @@ export interface Airline {
   name: string;
   luggageinfo: string;
   companyinfo: string;
+  averageRating: number;
 }

@@ -17,6 +17,7 @@ import { AirlineReviewsComponent } from './airline-info/airline-reviews/airline-
 import { CommentboxComponent } from './airline-info/commentbox/commentbox.component';
 import {CommentsComponent, DatacontainerDirective} from './airline-info/comments/comments.component';
 import { ChildboxComponent } from './airline-info/childbox/childbox.component';
+import {NgbRatingModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -39,12 +40,13 @@ import { ChildboxComponent } from './airline-info/childbox/childbox.component';
     LandingComponent,
     HeaderComponent
   ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        RouterModule,
-        ReactiveFormsModule,
-    ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule,
+    ReactiveFormsModule,
+    NgbRatingModule,
+  ],
   providers: [ HttpClientModule ]
 })
 export class PagesModule { }

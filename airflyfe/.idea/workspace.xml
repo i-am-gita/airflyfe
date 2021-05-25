@@ -3,18 +3,30 @@
   <component name="ChangeListManager">
     <list default="true" id="5a1afaef-9d23-4833-a6ac-fbcfb151c675" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/__ngcc_entry_points__.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/data/airline.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/data/airline.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/airline-info/airline-info.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/airline-info/airline-info.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/airline-info/airline-info.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/airline-info/airline-info.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/airline-info/airline.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/airline-info/airline.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/flights/flight-item/flight-item.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/flights/flight-item/flight-item.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/flights/flight-item/flight-item.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/flights/flight-item/flight-item.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tickets/ticket-reservation/ticket-reservation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tickets/ticket-reservation/ticket-reservation.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/tickets/ticket-reservation/ticket-reservation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/tickets/ticket-reservation/ticket-reservation.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/polyfills.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -117,7 +129,9 @@
       <workItem from="1621234074617" duration="203000" />
       <workItem from="1621778979065" duration="9914000" />
       <workItem from="1621839821842" duration="25000" />
-      <workItem from="1621856908963" duration="5628000" />
+      <workItem from="1621856908963" duration="6226000" />
+      <workItem from="1621958762292" duration="1897000" />
+      <workItem from="1621961607834" duration="4139000" />
     </task>
     <servers />
   </component>

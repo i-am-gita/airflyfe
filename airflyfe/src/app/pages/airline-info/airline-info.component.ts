@@ -3,6 +3,7 @@ import {Airline} from '../../core/data/airline';
 import {Review} from '../../core/data/review';
 import {AirlineService} from './airline.service';
 import {ReviewDTO} from '../../core/dto/reviewDTO';
+import {RatingsDTO} from '../../core/dto/ratingsDTO';
 
 @Component({
   selector: 'app-airline-info',
@@ -12,8 +13,16 @@ import {ReviewDTO} from '../../core/dto/reviewDTO';
 export class AirlineInfoComponent implements OnInit {
 
   @Input('airline') airline: Airline;
+  @Input('averageRating') avgRating: number;
   comments: string;
   count: number;
+  currentRate: number = 0;
+  ratingDto: RatingsDTO = {
+    airlineId: null,
+    rating: null,
+    userId: null,
+  };
+
 
   showReviews: boolean;
   review: ReviewDTO = {
@@ -35,6 +44,12 @@ export class AirlineInfoComponent implements OnInit {
       console.log(data);
       this.reviews = data;
     })
+
+    this.airlineService.getAverageRatingForAirline(this.airline.airlineid).subscribe(data => {
+      console.log(data);
+      this.currentRate = data;
+      this.airline.averageRating = data;
+    });
   }
 
   toggleReviews() {
@@ -64,5 +79,18 @@ export class AirlineInfoComponent implements OnInit {
 
     });
     location.reload();
+  }
+
+
+  postAndApplyNewRating() {
+    this.ratingDto.rating = this.currentRate;
+    this.ratingDto.airlineId = this.airline.airlineid;
+    this.ratingDto.userId = JSON.parse(localStorage.getItem('currentUser')).id;
+
+    console.log(this.ratingDto);
+    this.airlineService.rateAirline(this.ratingDto).subscribe(data => {
+      console.log(data);
+      this.airline.averageRating = data;
+    })
   }
 }
