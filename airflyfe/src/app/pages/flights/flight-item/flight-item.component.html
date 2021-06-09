@@ -1,31 +1,63 @@
-<div class="card">
-  <div class="card-header">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
 
-    <span class="flight-date">{{flight.takeoffdate}}</span>
-  </div>
-  <div class="card-body text-center">
-    <div class="text-muted">{{printType(flight.typee)}}</div>
 
-    <button class="card-title btn btn-info" (click)="toAirlinePage(flight.airline)">{{flight.airline.name}}</button>
-    <div class="row">
-      <div class="col-sm-5 destination-text">
-        {{flight.destination.airport1.name}}
-      </div>
-      <div class="col-sm-2" style="margin-top: 1em;">
-       -
-      </div>
-      <div class="col-sm-5 destination-text">
-        {{flight.destination.airport2.name}}
-      </div>
-    </div>
-<!--    <p class="card-text">{{flight.destination.airport1.name}}-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;{{flight.destination.airport2.name}}</p>-->
-  </div>
-  <div class="card-footer ">
-    <span class="seats-number text-muted">Seats available:{{flight.availabletickets}}</span>
-    <span>
+      <div class="card">
+        <div class="card-header">
+
+          <span class="flight-date">{{flight.takeoffdate}}</span>
+        </div>
+        <div class="card-body text-center">
+          <div class="text-muted">{{printType(flight.typee)}}</div>
+
+          <button class="card-title btn btn-info"
+                  (click)="toAirlinePage(flight.airline)">{{flight.airline.name}}</button>
+          <div class="row">
+            <div class="col-sm-5 destination-text">
+              {{flight.destination.airport1.name}}
+            </div>
+            <div class="col-sm-2" style="margin-top: 1em;">
+              -
+            </div>
+            <div class="col-sm-5 destination-text">
+              {{flight.destination.airport2.name}}
+            </div>
+          </div>
+          <!--    <p class="card-text">{{flight.destination.airport1.name}}-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;{{flight.destination.airport2.name}}</p>-->
+        </div>
+        <div class="card-footer ">
+          <span class="seats-number text-muted">Seats available:{{flight.availabletickets}}</span>
+          <span>
 
       <button class="btn  ticket-link" (click)="ticketReservation(flight)">Book a flight</button>
     </span>
-    <div *ngIf="showAirline===true"> <app-airline-info [airline]="flight.airline"></app-airline-info> </div>
+          <div *ngIf="showAirline===true">
+            <app-airline-info [airline]="flight.airline"></app-airline-info>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header">
+          <span class="flight-date">Plane type: {{flight.plane.name}}</span>
+        </div>
+        <div class="card-body text-center">
+          <div class="desc">{{flight.plane.description}}</div>
+          <div class="plane-images">
+            <img class="plane-image" [src]="currentPhoto.url" title="plane photo" alt="photo">
+            <button class="btn-sm" (click)="changeImage()">Next</button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
   </div>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FlightsService} from '../flights/flights.service';
 import {Flight} from '../../core/data/flight';
+import {FlightWithPrice} from '../../core/data/flightWithPrice';
 
 @Component({
   selector: 'app-all-flights',
@@ -9,7 +10,8 @@ import {Flight} from '../../core/data/flight';
 })
 export class AllFlightsComponent implements OnInit {
 
-  flights: Flight[];
+  //flights: Flight[];
+  flights: FlightWithPrice[];
 
   constructor(private flightService: FlightsService) { }
 

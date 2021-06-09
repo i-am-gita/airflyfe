@@ -18,6 +18,7 @@ import { CommentboxComponent } from './airline-info/commentbox/commentbox.compon
 import {CommentsComponent, DatacontainerDirective} from './airline-info/comments/comments.component';
 import { ChildboxComponent } from './airline-info/childbox/childbox.component';
 import {NgbRatingModule} from '@ng-bootstrap/ng-bootstrap';
+import { AirlinesComponent } from './airlines/airlines.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {NgbRatingModule} from '@ng-bootstrap/ng-bootstrap';
     CommentsComponent,
     ChildboxComponent,
     DatacontainerDirective,
+    AirlinesComponent,
   ],
   exports: [
     LandingComponent,

@@ -9,6 +9,8 @@ import {Ticket} from '../../core/data/ticket';
 import {tick} from '@angular/core/testing';
 import {NewFlightDTO} from '../../core/dto/newFlightDTO';
 import {Airline} from '../../core/data/airline';
+import {Photo} from '../../core/data/photo';
+import {FlightWithPrice} from '../../core/data/flightWithPrice';
 
 @Injectable({ providedIn: 'root' })
 export class FlightsService {
@@ -61,10 +63,20 @@ export class FlightsService {
     }));
   }
 
-  getFlights(): Observable<Flight[]> {
-    const url = environment.serverUrl + 'api/flight/getAllFlights';
+  // getFlights(): Observable<Flight[]> {
+  //   const url = environment.serverUrl + 'api/flight/getAllFlights';
+  //   return new Observable(((o: any) => {
+  //     this.http.get(url, {headers: this.httpHeaders }).subscribe((flights: Flight[]) => {
+  //       o.next(flights);
+  //       return o.complete();
+  //     });
+  //   }));
+  // }
+
+  getFlights(): Observable<FlightWithPrice[]> {
+    const url = environment.serverUrl + 'api/flight/getSortedFlights';
     return new Observable(((o: any) => {
-      this.http.get(url, {headers: this.httpHeaders }).subscribe((flights: Flight[]) => {
+      this.http.get(url, {headers: this.httpHeaders }).subscribe((flights: FlightWithPrice[]) => {
         o.next(flights);
         return o.complete();
       });
@@ -76,6 +88,16 @@ export class FlightsService {
     return new Observable(((o: any) => {
       this.http.get(url, {headers: this.httpHeaders }).subscribe((airlines: Airline[]) => {
         o.next(airlines);
+        return o.complete();
+      });
+    }));
+  }
+
+  getPhotosForPlaneId(id: number): Observable<Photo[]> {
+    const url = environment.serverUrl + 'api/photos/getPhotosForPlane/' + id;
+    return new Observable(((o: any) => {
+      this.http.get(url, {headers: this.httpHeaders }).subscribe((photo: Photo[]) => {
+        o.next(photo);
         return o.complete();
       });
     }));

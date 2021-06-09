@@ -10,6 +10,7 @@ import {RoleGuard} from './core/auth/role.guard';
 import {AllFlightsComponent} from './pages/all-flights/all-flights.component';
 import {TicketReservationComponent} from './pages/tickets/ticket-reservation/ticket-reservation.component';
 import {AirlineInfoComponent} from './pages/airline-info/airline-info.component';
+import {AirlinesComponent} from './pages/airlines/airlines.component';
 
 export const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -19,6 +20,7 @@ export const routes: Routes = [
   { path: 'flights', component: AllFlightsComponent },
   { path: 'ticket', component: TicketReservationComponent, canActivate: [AuthGuard]},
   { path: 'airline', component: AirlineInfoComponent },
+  { path: 'airlines', component: AirlinesComponent},
 ];
 
 const config: ExtraOptions = {

@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-header">
+    Best rated airlines in the past 30 days
+  </div>
+  <div class="card-body">
+    <span *ngFor="let airline of monthlyRatings | keyvalue">
+          <div class="airline-rating">{{airline['key']}} with average rating of {{roundNumber(airline.value)}}</div>
+    </span>
+  </div>
+</div>
+
+
